@@ -24,11 +24,11 @@
 }
 
 .section-title--black {
-  color: #1B1B1B;
+  color: #001749;
 }
 
 .section-title--red {
-  color: #DB0707;
+  color: #EE3F58;
 }
 
 @media screen and (max-width: 1441px) {
