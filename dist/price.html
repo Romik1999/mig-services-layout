@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Компьютерный мастер на дом | цена</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="cont">
+        <div class="header__wrapper">
+            <div class="header__hamburger">
+                <div class="hamburger">
+  <span class="hamburger__line"></span>
+  <span class="hamburger__line"></span>
+  <span class="hamburger__line"></span>
+</div>
+
+            </div>
+            <div class="header__advantages">
+                <div class="header-advantages">
+                    <div class="header-advantages__items">
+                        <div class="header-advantages__item">
+                            <div class="header-advantages__icon">
+                                <img src="./img/phone.svg">
+                            </div>
+                            <div class="header-advantages__text">
+                                Без выходных и праздников
+                            </div>
+                        </div>
+                        <div class="header-advantages__item">
+                            <div class="header-advantages__icon">
+                                <img src="./img/place.svg">
+                            </div>
+                            <div class="header-advantages__text">
+                                Выезд в любую точку города
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__links">
+                <a class="header__link header__link--active" href="./">Ремонт компьютеров/ноутбуков</a>
+                <a class="header__link" href="./price.html">Услуги и цены</a>
+            </div>
+            <div class="header__phone">
+                <a class="phone" href="tel:+7(969)777-11-64">+7(969)777-11-64</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="hero-price">
+    <div class="cont">
+        <div class="hero-price__title">
+            Услуги и цены
+        </div>
+        <div class="hero-price__text">
+            Мы предлагаем компьютерную помощь на дому
+            и в офисе по выгодным ценам. Мы ремонтируем и настраиваем компьютеры и ноутбуки любой сложности.
+            Профессиональные мастера и большой склад запчастей являются гарантией быстрого ремонта.
+        </div>
+        <div class="hero-price__form">
+            <form class="form form--grey">
+    <div class="form__wrapper">
+        <label class="form__field">
+            <input class="form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__field">
+            <input class="form__input" placeholder="+7 (___) ___ - __ - __"
+                   onkeypress="maskPhone(event)"
+                   onpaste="onPastePhone(event)">
+        </label>
+        <button class="form__submit" type="submit">Получить скидку</button>
+    </div>
+</form>
+
+<script>
+    function maskPhone(e) {
+        const mask = /\+7 \(\d{3}\) \d{3} \d{2} \d{2}/;
+        var valSize = e.target.value.trim().replace(/\D/g, "").length;
+        e = e || window.event;
+        var key = e.keyCode || e.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\+/;
+        if (!regex.test(key)) {
+            e.returnValue = false;
+            if (e.preventDefault) e.preventDefault();
+        } else {
+            if (valSize !== 0 && key === "+") {
+                e.returnValue = false;
+                return;
+            }
+            if (valSize === 0) {
+                if (key === "8" || key === "7") {
+                    e.target.value = "+7";
+                    e.returnValue = false;
+                } else if (key === "9") {
+                    e.target.value = "+7 (9";
+                    e.returnValue = false;
+                } else if (key !== "+") {
+                    e.target.value = "+7 (9";
+                } else if (key === "+" && e.target.value === "+") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 1) {
+                e.target.value = "+7 (9";
+                if (key === "9") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 4) {
+                if (e.target.value.slice(-1) === ")") {
+                    e.target.value = e.target.value.trim() + " ";
+                } else if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + ") ";
+            } else if (valSize === 7 || valSize === 9) {
+                if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + " ";
+            } else if (valSize === 11) {
+                e.returnValue = false;
+            }
+        }
+    }
+
+    function onPastePhone(e) {
+        e.preventDefault();
+        const mask = /(7|8)(9\d{2})(\d{3})(\d{2})(\d{2})/;
+        var phone = e.clipboardData.getData('text/plain').replace(/\D/g, "");
+        if (!mask.test(phone)) {
+            e.returnValue = false;
+            return;
+        }
+        var matched = phone.match(mask);
+        e.target.value = "+7 (" + matched[2] + ") " + matched[3] + " " + matched[4] + " " + matched[5];
+        e.returnValue = false;
+    }
+</script>
+        </div>
+    </div>
+</section>
+
+    <section class="stages">
+    <div class="cont">
+        <div class="stages__items">
+            <div class="stages__item">
+                <div class="stages__icon">
+                    <img src="./img/stages-1.svg">
+                </div>
+                <div class="stages__text">Оставляете заявку</div>
+            </div>
+            <div class="stages__arrow">
+                <img src="./img/stages-arrow.svg">
+            </div>
+            <div class="stages__item">
+                <div class="stages__icon">
+                    <img src="./img/stages-2.svg">
+                </div>
+                <div class="stages__text">Приезжает мастер</div>
+            </div>
+            <div class="stages__arrow">
+                <img src="./img/stages-arrow.svg">
+            </div>
+            <div class="stages__item">
+                <div class="stages__icon">
+                    <img src="./img/stages-3.svg">
+                </div>
+                <div class="stages__text">Производит ремонт</div>
+            </div>
+            <div class="stages__arrow">
+                <img src="./img/stages-arrow.svg">
+            </div>
+            <div class="stages__item">
+                <div class="stages__icon">
+                    <img src="./img/stages-4.svg">
+                </div>
+                <div class="stages__text">Компьютер исправен</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="price price--top">
+    <div class="cont">
+        <h2 class="section-title price__title section-title--black">Стоимость услуг</h2>
+
+        <div class="price__subtitle">
+            <span>Выезд и диагностика</span>
+            <span>бесплатно</span>
+        </div>
+        <div class="price__items">
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка Windows</div>
+                    <div class="price__price">от 450 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка антивируса</div>
+                    <div class="price__price">от 100 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Переустановка Windows</div>
+                    <div class="price__price">от 270 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Подключение и настройка оргтехники</div>
+                    <div class="price__price">от 370 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Настройка Windows</div>
+                    <div class="price__price">от 270 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Настройка Wi-Fi</div>
+                    <div class="price__price">от 200 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка драйверов</div>
+                    <div class="price__price">от 150 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Настройка роутера</div>
+                    <div class="price__price">от 300 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка пакета MC Office</div>
+                    <div class="price__price">от 250 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка и настройка VPN</div>
+                    <div class="price__price">от 250 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка интернет-программ</div>
+                    <div class="price__price">от 100 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка интернет-программ</div>
+                    <div class="price__price">от 100 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Удаление вирусов</div>
+                    <div class="price__price">от 200 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Удаление вирусов</div>
+                    <div class="price__price">от 200 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Снятие вируса-баннера</div>
+                    <div class="price__price">от 200 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена/установка SSD</div>
+                    <div class="price__price">от 340 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Чистка компьютера</div>
+                    <div class="price__price">от 450 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена материнской платы</div>
+                    <div class="price__price">от 800 руб.</div>
+                </div>
+            </div>
+            <div class="price__row">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена разъемов</div>
+                    <div class="price__price">от 800 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена привода дисков</div>
+                    <div class="price__price">от 450 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена оперативной памяти</div>
+                    <div class="price__price">от 340 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена системы охлаждения</div>
+                    <div class="price__price">от 800 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена жесткого диска</div>
+                    <div class="price__price">от 340 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Диагностика принтера/сканера/МФУ</div>
+                    <div class="price__price">0 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена видеокарты</div>
+                    <div class="price__price">от 340 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Подключение и настройка принтера</div>
+                    <div class="price__price">от 370 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена процессора</div>
+                    <div class="price__price">от 1190 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Подключение и настройка МФУ</div>
+                    <div class="price__price">от 370 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена блока питания</div>
+                    <div class="price__price">от 340 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Подключение и настройка сканера</div>
+                    <div class="price__price">от 370 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Замена корпуса</div>
+                    <div class="price__price">от 600 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Подключение и настройка оргтехники</div>
+                    <div class="price__price">от 370 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Настройка компьютера</div>
+                    <div class="price__price">от 270 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Подключение оргтехники к сети Wi-Fi</div>
+                    <div class="price__price">от 370 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Подключение нового компьютера</div>
+                    <div class="price__price">от 270 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка программ</div>
+                    <div class="price__price">от 100 руб.</div>
+                </div>
+            </div>
+            <div class="price__row price__row--hidden">
+                <div class="price__item" data-modal>
+                    <div class="price__name">Настройка Bios</div>
+                    <div class="price__price">от 450 руб.</div>
+                </div>
+                <div class="price__item" data-modal>
+                    <div class="price__name">Установка антивируса</div>
+                    <div class="price__price">от 100 руб.</div>
+                </div>
+            </div>
+        </div>
+        <div class="price__button">Все услуги и цены</div>
+    </div>
+</section>
+
+    <section class="dependence">
+    <div class="cont">
+        <h2 class="section-title dependence__title section-title--black">От чего зависит цена ремонта</h2>
+
+        <div class="dependence__items">
+            <div class="dependence__item">
+                <div class="dependence__img">
+                    <img src="./img/dependence-1.svg" alt="Курс валюты на день закупки">
+                </div>
+                <div class="dependence__text">Курс валюты на день закупки</div>
+            </div>
+            <div class="dependence__item">
+                <div class="dependence__img">
+                    <img src="./img/dependence-2.svg" alt="Модель компьютера, моноблока или ноутбука">
+                </div>
+                <div class="dependence__text">Модель компьютера, моноблока или ноутбука</div>
+            </div>
+            <div class="dependence__item">
+                <div class="dependence__img">
+                    <img src="./img/dependence-3.svg" alt="Необходимость закупки запчастей">
+                </div>
+                <div class="dependence__text">Необходимость закупки запчастей</div>
+            </div>
+            <div class="dependence__item">
+                <div class="dependence__img">
+                    <img src="./img/dependence-4.svg" alt="Необходимость проведения доп услуг">
+                </div>
+                <div class="dependence__text">Необходимость проведения доп услуг</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="offer">
+    <div class="cont">
+        <div class="offer__wrapper">
+            <h2 class="section-title offer__title section-title--white">Получите скидку 10% за заявку на сайте</h2>
+
+            <div class="offer__subtitle">Оставьте заявку  наш менеджер свяжется с Вами в ближайшее время</div>
+            <div class="offer__form">
+                <form class="form form--white">
+    <div class="form__wrapper">
+        <label class="form__field">
+            <input class="form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__field">
+            <input class="form__input" placeholder="+7 (___) ___ - __ - __"
+                   onkeypress="maskPhone(event)"
+                   onpaste="onPastePhone(event)">
+        </label>
+        <button class="form__submit" type="submit">Получить скидку</button>
+    </div>
+</form>
+
+<script>
+    function maskPhone(e) {
+        const mask = /\+7 \(\d{3}\) \d{3} \d{2} \d{2}/;
+        var valSize = e.target.value.trim().replace(/\D/g, "").length;
+        e = e || window.event;
+        var key = e.keyCode || e.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\+/;
+        if (!regex.test(key)) {
+            e.returnValue = false;
+            if (e.preventDefault) e.preventDefault();
+        } else {
+            if (valSize !== 0 && key === "+") {
+                e.returnValue = false;
+                return;
+            }
+            if (valSize === 0) {
+                if (key === "8" || key === "7") {
+                    e.target.value = "+7";
+                    e.returnValue = false;
+                } else if (key === "9") {
+                    e.target.value = "+7 (9";
+                    e.returnValue = false;
+                } else if (key !== "+") {
+                    e.target.value = "+7 (9";
+                } else if (key === "+" && e.target.value === "+") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 1) {
+                e.target.value = "+7 (9";
+                if (key === "9") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 4) {
+                if (e.target.value.slice(-1) === ")") {
+                    e.target.value = e.target.value.trim() + " ";
+                } else if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + ") ";
+            } else if (valSize === 7 || valSize === 9) {
+                if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + " ";
+            } else if (valSize === 11) {
+                e.returnValue = false;
+            }
+        }
+    }
+
+    function onPastePhone(e) {
+        e.preventDefault();
+        const mask = /(7|8)(9\d{2})(\d{3})(\d{2})(\d{2})/;
+        var phone = e.clipboardData.getData('text/plain').replace(/\D/g, "");
+        if (!mask.test(phone)) {
+            e.returnValue = false;
+            return;
+        }
+        var matched = phone.match(mask);
+        e.target.value = "+7 (" + matched[2] + ") " + matched[3] + " " + matched[4] + " " + matched[5];
+        e.returnValue = false;
+    }
+</script>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="advantages">
+    <div class="cont">
+        <div class="advantages__items">
+            <div class="advantages__item">
+                <div class="advantages-item" data-modal>
+    <div class="advantages-item__img">
+        <img src="./img/advantages-item-1.png">
+    </div>
+    <div class="advantages-item__info">
+        <div class="advantages-item__title">Бесплатная диагностика</div>
+        <div class="advantages-item__text">Перед любыми ремонтными работами мы обязательно проводим тщательную диагностику вашего оборудования, озвучиваем окончательную стоимость услуг. При согласии на ремонт, стоимость диагностики не оплачивается.</div>
+        <div class="advantages-item__link">Подробнее о диагностике</div>
+    </div>
+</div>
+
+            </div>
+            <div class="advantages__item">
+                <div class="advantages-item" data-modal>
+    <div class="advantages-item__img">
+        <img src="./img/advantages-item-2.png">
+    </div>
+    <div class="advantages-item__info">
+        <div class="advantages-item__title">Ремонт в день обращения</div>
+        <div class="advantages-item__text">Мы понимаем, как ценно Ваше время, поэтому предоставляем компьютерную помощь в день обращения на дому и в офисе. Не важно, что случилось с Вашим компьютером: он зависает, не включается или заражен вирусом – мы занимаемся ремонтом компьютеров уже более 8 лет, а потому нам не составит труда устранить неисправность в кратчайшие сроки. На весь ремонт компьютеров на дому гарантия до 1 года.</div>
+        <div class="advantages-item__link">Подробнее о диагностике</div>
+    </div>
+</div>
+
+            </div>
+            <div class="advantages__item">
+                <div class="advantages-item" data-modal>
+    <div class="advantages-item__img">
+        <img src="./img/advantages-item-3.png">
+    </div>
+    <div class="advantages-item__info">
+        <div class="advantages-item__title">Гарантия до 1 года</div>
+        <div class="advantages-item__text">Вы можете быть уверены в качестве наших работ по компьютерной помощи так, как уверены в них мы. Именно поэтому мы предоставляем надежную гарантию на работу и комплектующие до 1 года в зависимости от типа проведенных работ.</div>
+        <div class="advantages-item__link">Подробнее о диагностике</div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="cont">
+        <div class="footer__wrapper">
+            <div class="footer__advantages">
+                <div class="footer-advantages">
+                    <div class="footer-advantages__items">
+                        <div class="footer-advantages__item">
+                            <div class="footer-advantages__icon">
+                                <img src="./img/phone.svg">
+                            </div>
+                            <div class="footer-advantages__text">
+                                Без выходных и праздников
+                            </div>
+                        </div>
+                        <div class="footer-advantages__item">
+                            <div class="footer-advantages__icon">
+                                <img src="./img/place.svg">
+                            </div>
+                            <div class="footer-advantages__text">
+                                Выезд в любую точку города
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__phone">
+                <a class="footer-phone" href="tel:+7(969)777-11-64">+7(969)777-11-64</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal">
+    <div class="modal__container">
+        <div class="modal__wrapper">
+            <img class="modal__close" src="./img/close.svg">
+            <h2 class="section-title modal__title section-title--black">Оcтавьте заявку прямо сейчас!</h2>
+
+            <div class="modal__subtitle">Менеджер свяжется с Вами в ближайшее время</div>
+            <div class="modal__form">
+                <form class="form form--grey">
+    <div class="form__wrapper">
+        <label class="form__field">
+            <input class="form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__field">
+            <input class="form__input" placeholder="+7 (___) ___ - __ - __"
+                   onkeypress="maskPhone(event)"
+                   onpaste="onPastePhone(event)">
+        </label>
+        <button class="form__submit" type="submit">Получить скидку</button>
+    </div>
+</form>
+
+<script>
+    function maskPhone(e) {
+        const mask = /\+7 \(\d{3}\) \d{3} \d{2} \d{2}/;
+        var valSize = e.target.value.trim().replace(/\D/g, "").length;
+        e = e || window.event;
+        var key = e.keyCode || e.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\+/;
+        if (!regex.test(key)) {
+            e.returnValue = false;
+            if (e.preventDefault) e.preventDefault();
+        } else {
+            if (valSize !== 0 && key === "+") {
+                e.returnValue = false;
+                return;
+            }
+            if (valSize === 0) {
+                if (key === "8" || key === "7") {
+                    e.target.value = "+7";
+                    e.returnValue = false;
+                } else if (key === "9") {
+                    e.target.value = "+7 (9";
+                    e.returnValue = false;
+                } else if (key !== "+") {
+                    e.target.value = "+7 (9";
+                } else if (key === "+" && e.target.value === "+") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 1) {
+                e.target.value = "+7 (9";
+                if (key === "9") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 4) {
+                if (e.target.value.slice(-1) === ")") {
+                    e.target.value = e.target.value.trim() + " ";
+                } else if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + ") ";
+            } else if (valSize === 7 || valSize === 9) {
+                if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + " ";
+            } else if (valSize === 11) {
+                e.returnValue = false;
+            }
+        }
+    }
+
+    function onPastePhone(e) {
+        e.preventDefault();
+        const mask = /(7|8)(9\d{2})(\d{3})(\d{2})(\d{2})/;
+        var phone = e.clipboardData.getData('text/plain').replace(/\D/g, "");
+        if (!mask.test(phone)) {
+            e.returnValue = false;
+            return;
+        }
+        var matched = phone.match(mask);
+        e.target.value = "+7 (" + matched[2] + ") " + matched[3] + " " + matched[4] + " " + matched[5];
+        e.returnValue = false;
+    }
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="libs/swiper/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+
+</body>
+</html>
