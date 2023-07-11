@@ -1,0 +1,26 @@
+@import "../../scss/colors.scss";
+
+.feedback {
+  &__subtitle {
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 1441px) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 1025px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (max-width: 769px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width: 576px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__form{
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
