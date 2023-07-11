@@ -1,4 +1,5 @@
 .btn {
+  width: 100%;
   text-decoration: none;
   cursor: pointer;
   display: -webkit-box;
@@ -56,17 +57,14 @@
   color: #0669B2;
 }
 
-@media screen and (max-width: 1441px) {
+@media screen and (max-width: 1025px) {
   .btn {
-    font-size: 18px;
     height: 55px;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .btn {
-    font-size: 16px;
-    height: 50px;
     padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 120%;
+    letter-spacing: -0.34px;
   }
 }

@@ -1,0 +1,52 @@
+<section class="work">
+    <div class="cont">
+        @@include('section-title/section-title.html', {
+        sectionTitleClass: 'work__title',
+        sectionTitleAlignClass:'section-title--center',
+        sectionTitleText: 'Сделаем за вас всё «под ключ»',
+        sectionTitleColorClass: 'section-title--blue'
+        } )
+        @@include('section-subtitle/section-subtitle.html', {
+        sectionSubTitleClass: 'work__subtitle',
+        sectionSubTitleAlignClass:'section-subtitle--center',
+        sectionSubTitleColorClass: 'section-subtitle--dark',
+        sectionSubTitleText: 'Все пошлины и сборы включены в стоимость'
+        } )
+        <div class="work__wrapper">
+            <div class="work__info">
+                <div class="work-info">
+                    @@include('section-title/section-title.html', {
+                    sectionTitleClass: 'work-info__title',
+                    sectionTitleAlignClass:'section-title--left',
+                    sectionTitleText: 'Команда<br> профессионалов',
+                    sectionTitleColorClass: 'section-title--dark'
+                    } )
+                    @@include('section-subtitle/section-subtitle.html', {
+                    sectionSubTitleClass: 'work-info__subtitle',
+                    sectionSubTitleAlignClass:'section-subtitle--left',
+                    sectionSubTitleColorClass: 'section-subtitle--dark',
+                    sectionSubTitleText: 'решаем вопросы любой сложности'
+                    } )
+                    <div class="work-info__numbers">
+                        <div class="work-numbers">
+                            <div class="work-numbers__items">
+                                <div class="work-numbers__item">
+                                    <span class="work-numbers__number">2014</span>
+                                    <span class="work-numbers__text">год основания</span>
+                                </div>
+                                <div class="work-numbers__item">
+                                    <span class="work-numbers__number">13 700</span>
+                                    <span class="work-numbers__text">довольных клиентов</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="work__img">
+                <img class="work__img--relative" src="./img/work/work-1.png" alt="Сделаем за вас всё «под ключ»">
+                <img class="work__img--absolute" src="./img/work/work-2.png" alt="Сделаем за вас всё «под ключ»">
+            </div>
+        </div>
+    </div>
+</section>
