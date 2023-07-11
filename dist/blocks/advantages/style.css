@@ -1,0 +1,33 @@
+.feedback__subtitle {
+  margin-bottom: 50px;
+}
+
+.feedback__form {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1441px) {
+  .feedback__subtitle {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .feedback__subtitle {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .feedback__subtitle {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .feedback__subtitle {
+    margin-bottom: 12px;
+  }
+}
