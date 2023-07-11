@@ -147,6 +147,7 @@ main {
 }
 
 .btn {
+  width: 100%;
   text-decoration: none;
   cursor: pointer;
   display: -webkit-box;
@@ -420,81 +421,13 @@ main {
   background-color: #EE3F58;
 }
 
-.form--grey .form__input {
-  border: 1px solid rgba(27, 27, 27, 0.45);
-}
-
-.form--grey .form__input::-webkit-input-placeholder {
-  color: rgba(27, 27, 27, 0.45);
-}
-
-.form--grey .form__input::-moz-placeholder {
-  color: rgba(27, 27, 27, 0.45);
-}
-
-.form--grey .form__input:-ms-input-placeholder {
-  color: rgba(27, 27, 27, 0.45);
-}
-
-.form--grey .form__input::-ms-input-placeholder {
-  color: rgba(27, 27, 27, 0.45);
-}
-
-.form--grey .form__input::placeholder {
-  color: rgba(27, 27, 27, 0.45);
-}
-
-.form--grey .form__submit {
-  background-color: #EE3F58;
-  color: #ffffff;
-}
-
-.form--grey .form__submit:hover {
-  background-color: #2DC36A;
-}
-
-.form--white .form__input {
-  border: 1px solid #ffffff;
-}
-
-.form--white .form__input::-webkit-input-placeholder {
-  color: #ffffff;
-}
-
-.form--white .form__input::-moz-placeholder {
-  color: #ffffff;
-}
-
-.form--white .form__input:-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.form--white .form__input::-ms-input-placeholder {
-  color: #ffffff;
-}
-
-.form--white .form__input::placeholder {
-  color: #ffffff;
-}
-
-.form--white .form__submit {
-  background-color: #001749;
-  border: 1px solid #001749;
-  color: #ffffff;
-}
-
-.form--white .form__submit:hover {
-  background-color: #ffffff;
-  color: #001749;
-}
-
 .form__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 15px;
-     -moz-column-gap: 15px;
-          column-gap: 15px;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
 }
 
 .form__field {
@@ -512,64 +445,48 @@ main {
           align-items: center;
   width: 100%;
   height: 60px;
-  border-radius: 15px;
-  padding: 18px 20px;
+  padding: 18px 23px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: transparent;
   font-size: 18px;
   line-height: 120%;
+  border-radius: 10px;
+  border: 1px solid #BDBDBD;
 }
 
 .form__input::-webkit-input-placeholder {
   font-size: 18px;
   line-height: 120%;
+  color: #BDBDBD;
 }
 
 .form__input::-moz-placeholder {
   font-size: 18px;
   line-height: 120%;
+  color: #BDBDBD;
 }
 
 .form__input:-ms-input-placeholder {
   font-size: 18px;
   line-height: 120%;
+  color: #BDBDBD;
 }
 
 .form__input::-ms-input-placeholder {
   font-size: 18px;
   line-height: 120%;
+  color: #BDBDBD;
 }
 
 .form__input::placeholder {
   font-size: 18px;
   line-height: 120%;
+  color: #BDBDBD;
 }
 
 .form__input:focus {
   outline: none;
-}
-
-.form__submit {
-  width: 100%;
-  height: 60px;
-  border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: none;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 105%;
-  cursor: pointer;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
 }
 
 .modal {
@@ -818,12 +735,17 @@ main {
   line-height: 120%;
 }
 
-@media screen and (max-width: 1441px) {
-  .btn {
-    font-size: 18px;
-    height: 55px;
-  }
+.feedback__subtitle {
+  margin-bottom: 50px;
+}
 
+.feedback__form {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1441px) {
   .header__wrapper {
     -webkit-column-gap: 15px;
        -moz-column-gap: 15px;
@@ -836,15 +758,6 @@ main {
 
   .section-subtitle {
     font-size: 25px;
-  }
-
-  .form__input {
-    height: 55px;
-  }
-
-  .form__submit {
-    height: 55px;
-    font-size: 18px;
   }
 
   .modal__wrapper {
@@ -886,6 +799,10 @@ main {
   .reviews-item__text {
     font-size: 16px;
   }
+
+  .feedback__subtitle {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 1160px) {
@@ -898,12 +815,55 @@ main {
 }
 
 @media screen and (max-width: 1025px) {
+  .btn {
+    height: 55px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 120%;
+    letter-spacing: -0.34px;
+  }
+
   .section-title {
     font-size: 30px;
   }
 
   .section-subtitle {
     font-size: 20px;
+  }
+
+  .form__wrapper {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+
+  .form__input {
+    height: 55px;
+    padding: 18px;
+    border-radius: 7px;
+    font-size: 16px;
+  }
+
+  .form__input::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+
+  .form__input::-moz-placeholder {
+    font-size: 16px;
+  }
+
+  .form__input:-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .form__input::-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  .form__input::placeholder {
+    font-size: 16px;
   }
 
   .reviews__subtitle {
@@ -942,6 +902,10 @@ main {
     font-size: 14px;
     padding: 13px 8px;
   }
+
+  .feedback__subtitle {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -949,53 +913,8 @@ main {
     padding: 40px 20px;
   }
 
-  .btn {
-    font-size: 16px;
-    height: 50px;
-    padding: 10px;
-  }
-
   .footer__text {
     padding: 55px 0;
-  }
-
-  .form__wrapper {
-    -webkit-column-gap: 10px;
-       -moz-column-gap: 10px;
-            column-gap: 10px;
-  }
-
-  .form__input {
-    height: 50px;
-    padding: 15px 12px;
-    border-radius: 10px;
-    font-size: 14px;
-  }
-
-  .form__input::-webkit-input-placeholder {
-    font-size: 14px;
-  }
-
-  .form__input::-moz-placeholder {
-    font-size: 14px;
-  }
-
-  .form__input:-ms-input-placeholder {
-    font-size: 14px;
-  }
-
-  .form__input::-ms-input-placeholder {
-    font-size: 14px;
-  }
-
-  .form__input::placeholder {
-    font-size: 14px;
-  }
-
-  .form__submit {
-    height: 50px;
-    border-radius: 10px;
-    font-size: 14px;
   }
 
   .modal__container {
@@ -1075,32 +994,6 @@ main {
     row-gap: 10px;
   }
 
-  .form__input {
-    padding: 15px 20px;
-    border-radius: 10px;
-    font-size: 16px;
-  }
-
-  .form__input::-webkit-input-placeholder {
-    font-size: 16px;
-  }
-
-  .form__input::-moz-placeholder {
-    font-size: 16px;
-  }
-
-  .form__input:-ms-input-placeholder {
-    font-size: 16px;
-  }
-
-  .form__input::-ms-input-placeholder {
-    font-size: 16px;
-  }
-
-  .form__input::placeholder {
-    font-size: 16px;
-  }
-
   .modal__container {
     padding: 15px;
     border-radius: 15px;
@@ -1149,6 +1042,10 @@ main {
   .reviews__item {
     width: calc(50% - 5px);
   }
+
+  .feedback__subtitle {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1174,13 +1071,6 @@ main {
     font-size: 16px;
   }
 
-  .form__submit {
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 18px;
-    text-align: center;
-  }
-
   .reviews__subtitle {
     margin-bottom: 40px;
   }
@@ -1204,6 +1094,10 @@ main {
 
   .reviews-item__text {
     padding: 8px 12px;
+  }
+
+  .feedback__subtitle {
+    margin-bottom: 12px;
   }
 }
 

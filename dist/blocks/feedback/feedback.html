@@ -1,54 +1,86 @@
-<section class="reviews">
+<section class="feedback">
     <div class="cont">
-        <h2 class="section-title reviews__title section-title--center section-title--blue">Реальные отзывы наших клиентов</h2>
+        <h2 class="section-title feedback__title section-title--center section-title--dark">Получите БЕСПЛАТНУЮ консультацию</h2>
 
-        <h3 class="section-subtitle reviews__subtitle section-subtitle--center section-subtitle--dark">которые оформили РВП, ВНЖ, гражданство РФ</h3>
+        <h3 class="section-subtitle feedback__subtitle section-subtitle--center section-subtitle--dark">Консультации проводят ведущие миграционные специалисты</h3>
 
-        <div class="reviews__items">
-            <div class="reviews__item">
-                <div class="reviews-item">
-                    <div class="reviews-item__img"><img src="./img/reviews/review-1.png" alt="Марина Дмитриева"></div>
-                    <div class="reviews-item__title">Марина Дмитриева</div>
-                    <div class="reviews-item__text">Спасибо большое компании Мигуслуги за достойное отношение к клиентам
-                        и быструю четкую работу. Дозвонилась быстро, специалисты помогли со сбором документов. Сначала
-                        подавала на Разрешение на временное проживание. Прошло время, обратилась снова подавать уже на
-                        гражданство. Вы мне помогли!
-                    </div>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews-item">
-                    <div class="reviews-item__img"><img src="./img/reviews/review-2.png" alt="Рустам Каримов"></div>
-                    <div class="reviews-item__title">Рустам Каримов</div>
-                    <div class="reviews-item__text">Получал в этой комании РВП и давно думал о том, чтобы перебраться
-                        жить в Россию на постоянной основе. Решил с семьей активно заняться оформлением гражданства.
-                        Искали по хорошей репутации и отзывам и нашли агентство мигуслуги. Бумаги нужные собирали без
-                        задержек и все четко передавали в гос. Спасибо за работу!
-                    </div>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews-item">
-                    <div class="reviews-item__img"><img src="./img/reviews/review-3.png" alt="Алексей Потапко"></div>
-                    <div class="reviews-item__title">Алексей Потапко</div>
-                    <div class="reviews-item__text">Получил квалифицированную и очень оперативную помощь, за что
-                        огромное спасибо. Важно, что юрист с пониманием относиться к моим проблемам, что я очень оценил.
-                        Всем рекомендую при поиске помощи при оформлении вида на жительство, временной регистрации,
-                        гражданства обращаться в данную компанию!
-                    </div>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews-item">
-                    <div class="reviews-item__img"><img src="./img/reviews/review-4.png" alt="Лариса Дёмина"></div>
-                    <div class="reviews-item__title">Лариса Дёмина</div>
-                    <div class="reviews-item__text">Здравствуйте! Хочу поблагодарить сотрудников компании за помощь
-                        беженцам, которые попали в трудную ситуацию. Очень оказалось удобно, что могут ответить на
-                        многие вопросы и сразу же помочь уже по телефону. Нам оказали полную поддержку и сопровождение -
-                        это огромный плюс!
-                    </div>
-                </div>
-            </div>
+        <div class="feedback__form">
+            <form class="form @@customClass">
+    <div class="form__wrapper">
+        <label class="form__field">
+            <input class="form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__field">
+            <input class="form__input" placeholder="+7 (___) ___ - __ - __"
+                   onkeypress="maskPhone(event)"
+                   onpaste="onPastePhone(event)">
+        </label>
+        <button class="form__submit btn btn--red" type="submit">Получить скидку</button>
+    </div>
+</form>
+
+<script>
+    function maskPhone(e) {
+        const mask = /\+7 \(\d{3}\) \d{3} \d{2} \d{2}/;
+        var valSize = e.target.value.trim().replace(/\D/g, "").length;
+        e = e || window.event;
+        var key = e.keyCode || e.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\+/;
+        if (!regex.test(key)) {
+            e.returnValue = false;
+            if (e.preventDefault) e.preventDefault();
+        } else {
+            if (valSize !== 0 && key === "+") {
+                e.returnValue = false;
+                return;
+            }
+            if (valSize === 0) {
+                if (key === "8" || key === "7") {
+                    e.target.value = "+7";
+                    e.returnValue = false;
+                } else if (key === "9") {
+                    e.target.value = "+7 (9";
+                    e.returnValue = false;
+                } else if (key !== "+") {
+                    e.target.value = "+7 (9";
+                } else if (key === "+" && e.target.value === "+") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 1) {
+                e.target.value = "+7 (9";
+                if (key === "9") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 4) {
+                if (e.target.value.slice(-1) === ")") {
+                    e.target.value = e.target.value.trim() + " ";
+                } else if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + ") ";
+            } else if (valSize === 7 || valSize === 9) {
+                if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + " ";
+            } else if (valSize === 11) {
+                e.returnValue = false;
+            }
+        }
+    }
+
+    function onPastePhone(e) {
+        e.preventDefault();
+        const mask = /(7|8)(9\d{2})(\d{3})(\d{2})(\d{2})/;
+        var phone = e.clipboardData.getData('text/plain').replace(/\D/g, "");
+        if (!mask.test(phone)) {
+            e.returnValue = false;
+            return;
+        }
+        var matched = phone.match(mask);
+        e.target.value = "+7 (" + matched[2] + ") " + matched[3] + " " + matched[4] + " " + matched[5];
+        e.returnValue = false;
+    }
+</script>
         </div>
     </div>
 </section>

@@ -1,62 +1,19 @@
-<section class="reviews">
+<section class="feedback">
     <div class="cont">
         @@include('section-title/section-title.html', {
-        sectionTitleClass: 'reviews__title',
+        sectionTitleClass: 'feedback__title',
         sectionTitleAlignClass:'section-title--center',
-        sectionTitleText: 'Реальные отзывы наших клиентов',
-        sectionTitleColorClass: 'section-title--blue'
+        sectionTitleText: 'Получите БЕСПЛАТНУЮ консультацию',
+        sectionTitleColorClass: 'section-title--dark'
         } )
         @@include('section-subtitle/section-subtitle.html', {
-        sectionSubTitleClass: 'reviews__subtitle',
+        sectionSubTitleClass: 'feedback__subtitle',
         sectionSubTitleAlignClass:'section-subtitle--center',
         sectionSubTitleColorClass: 'section-subtitle--dark',
-        sectionSubTitleText: 'которые оформили РВП, ВНЖ, гражданство РФ'
+        sectionSubTitleText: 'Консультации проводят ведущие миграционные специалисты'
         } )
-        <div class="reviews__items">
-            <div class="reviews__item">
-                <div class="reviews-item">
-                    <div class="reviews-item__img"><img src="./img/reviews/review-1.png" alt="Марина Дмитриева"></div>
-                    <div class="reviews-item__title">Марина Дмитриева</div>
-                    <div class="reviews-item__text">Спасибо большое компании Мигуслуги за достойное отношение к клиентам
-                        и быструю четкую работу. Дозвонилась быстро, специалисты помогли со сбором документов. Сначала
-                        подавала на Разрешение на временное проживание. Прошло время, обратилась снова подавать уже на
-                        гражданство. Вы мне помогли!
-                    </div>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews-item">
-                    <div class="reviews-item__img"><img src="./img/reviews/review-2.png" alt="Рустам Каримов"></div>
-                    <div class="reviews-item__title">Рустам Каримов</div>
-                    <div class="reviews-item__text">Получал в этой комании РВП и давно думал о том, чтобы перебраться
-                        жить в Россию на постоянной основе. Решил с семьей активно заняться оформлением гражданства.
-                        Искали по хорошей репутации и отзывам и нашли агентство мигуслуги. Бумаги нужные собирали без
-                        задержек и все четко передавали в гос. Спасибо за работу!
-                    </div>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews-item">
-                    <div class="reviews-item__img"><img src="./img/reviews/review-3.png" alt="Алексей Потапко"></div>
-                    <div class="reviews-item__title">Алексей Потапко</div>
-                    <div class="reviews-item__text">Получил квалифицированную и очень оперативную помощь, за что
-                        огромное спасибо. Важно, что юрист с пониманием относиться к моим проблемам, что я очень оценил.
-                        Всем рекомендую при поиске помощи при оформлении вида на жительство, временной регистрации,
-                        гражданства обращаться в данную компанию!
-                    </div>
-                </div>
-            </div>
-            <div class="reviews__item">
-                <div class="reviews-item">
-                    <div class="reviews-item__img"><img src="./img/reviews/review-4.png" alt="Лариса Дёмина"></div>
-                    <div class="reviews-item__title">Лариса Дёмина</div>
-                    <div class="reviews-item__text">Здравствуйте! Хочу поблагодарить сотрудников компании за помощь
-                        беженцам, которые попали в трудную ситуацию. Очень оказалось удобно, что могут ответить на
-                        многие вопросы и сразу же помочь уже по телефону. Нам оказали полную поддержку и сопровождение -
-                        это огромный плюс!
-                    </div>
-                </div>
-            </div>
+        <div class="feedback__form">
+            @@include('form/form.html')
         </div>
     </div>
 </section>
