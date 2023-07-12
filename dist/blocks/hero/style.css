@@ -1,0 +1,136 @@
+.hero {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  overflow: hidden;
+}
+
+.hero__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 217px 0;
+}
+
+.hero__info {
+  max-width: 685px;
+  width: 100%;
+}
+
+.hero__image {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 56%;
+  width: 100%;
+  z-index: -1;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.hero__image img,
+.hero__image svg {
+  width: 100%;
+  height: auto;
+}
+
+.hero__subtitle {
+  color: #001749;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: 15px;
+}
+
+.hero__title {
+  color: #154DC8;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero__button {
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.hero__advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 22px;
+}
+
+.hero-advantage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.hero-advantage__icon {
+  width: 19px;
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-advantage__text {
+  color: #001749;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+@media screen and (max-width: 1441px) {
+  .hero__wrapper {
+    padding: 160px 0;
+  }
+
+  .hero__info {
+    max-width: 580px;
+  }
+
+  .hero__image {
+    max-width: 65%;
+    right: -15%;
+  }
+
+  .hero__subtitle {
+    font-size: 25px;
+  }
+
+  .hero__title {
+    font-size: 40px;
+  }
+
+  .hero__button {
+    max-width: 370px;
+  }
+}
