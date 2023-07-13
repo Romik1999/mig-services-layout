@@ -1,6 +1,13 @@
 @import "../../scss/colors.scss";
 
 .feedback {
+  background-color: $white;
+  padding: 100px 30px;
+
+  @media screen and (max-width: 769px) {
+    padding: 80px 15px;
+  }
+
   &__subtitle {
     margin-bottom: 50px;
 
@@ -18,7 +25,7 @@
     }
   }
 
-  &__form{
+  &__form {
     max-width: 1120px;
     width: 100%;
     margin: 0 auto;

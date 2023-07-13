@@ -1,3 +1,8 @@
+.feedback {
+  background-color: #ffffff;
+  padding: 100px 30px;
+}
+
 .feedback__subtitle {
   margin-bottom: 50px;
 }
@@ -21,6 +26,10 @@
 }
 
 @media screen and (max-width: 769px) {
+  .feedback {
+    padding: 80px 15px;
+  }
+
   .feedback__subtitle {
     margin-bottom: 20px;
   }
