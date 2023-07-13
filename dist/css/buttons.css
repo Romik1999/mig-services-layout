@@ -57,6 +57,16 @@
   color: #0669B2;
 }
 
+.btn--border {
+  border: 1px solid #001749;
+  color: #001749;
+}
+
+.btn--border:hover {
+  background-color: #001749;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1025px) {
   .btn {
     height: 55px;

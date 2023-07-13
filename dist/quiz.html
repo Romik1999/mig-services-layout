@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Мигуслуги</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="cont">
+        <div class="header__wrapper">
+            <div class="header__logo">
+<!--                <img src="./img/logo.svg">-->
+                <span>Миг</span><span>услуги</span>
+            </div>
+            <div class="header__button btn btn--blue">
+                <img src="./img/icons/phone.svg">
+                Бесплатная консультация
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="quiz">
+    <div class="cont">
+        <div class="quiz__step">
+            <div class="quiz-step">
+                <h2 class="section-title quiz-step__title section-title--center section-title--dark">Гражданином какой страны Вы являетесь?</h2>
+
+                <div class="quiz-step__items">
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Украина</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Беларусь</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Молдова</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Казахстан</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Узбекистан</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Киргизия</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Таджикистан</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Армения</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Азербайджан</span>
+                    </label>
+                    <label class="quiz-step__item">
+                        <input type="radio" name="quiz" class="quiz-step__input">
+                        <span class="quiz-step__text">Другие страны</span>
+                    </label>
+                </div>
+                <div class="quiz-step__buttons">
+                    <div class="quiz-step__button quiz-step__button--prev btn btn--border">Назад</div>
+                    <div class="quiz-step__button quiz-step__button--next btn btn--red">Далее</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</main>
+
+<footer class="footer">
+    <div class="cont">
+        <div class="footer__text">
+            Все права защищены.
+            <br>
+            443035, Самарская Область, г. Самара, пр-кт Юных Пионеров, д. 130а ООО "Л-КОРПОРАЦИЯ" ОГРН: 1196313076354 ИНН: 6312200743
+        </div>
+    </div>
+</footer>
+
+<div class="modal">
+    <div class="modal__container">
+        <div class="modal__wrapper">
+            <img class="modal__close" src="./img/close.svg">
+            <h2 class="section-title modal__title @@sectionTitleAlignClass section-title--black">Оcтавьте заявку прямо сейчас!</h2>
+
+            <div class="modal__subtitle">Менеджер свяжется с Вами в ближайшее время</div>
+            <div class="modal__form">
+                <form class="form form--grey">
+    <div class="form__wrapper">
+        <label class="form__field">
+            <input class="form__input" placeholder="Ваше имя">
+        </label>
+        <label class="form__field">
+            <input class="form__input" placeholder="+7 (___) ___ - __ - __"
+                   onkeypress="maskPhone(event)"
+                   onpaste="onPastePhone(event)">
+        </label>
+        <button class="form__submit btn btn--red" type="submit">Получить скидку</button>
+    </div>
+</form>
+
+<script>
+    function maskPhone(e) {
+        const mask = /\+7 \(\d{3}\) \d{3} \d{2} \d{2}/;
+        var valSize = e.target.value.trim().replace(/\D/g, "").length;
+        e = e || window.event;
+        var key = e.keyCode || e.which;
+        key = String.fromCharCode(key);
+        var regex = /[0-9]|\+/;
+        if (!regex.test(key)) {
+            e.returnValue = false;
+            if (e.preventDefault) e.preventDefault();
+        } else {
+            if (valSize !== 0 && key === "+") {
+                e.returnValue = false;
+                return;
+            }
+            if (valSize === 0) {
+                if (key === "8" || key === "7") {
+                    e.target.value = "+7";
+                    e.returnValue = false;
+                } else if (key === "9") {
+                    e.target.value = "+7 (9";
+                    e.returnValue = false;
+                } else if (key !== "+") {
+                    e.target.value = "+7 (9";
+                } else if (key === "+" && e.target.value === "+") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 1) {
+                e.target.value = "+7 (9";
+                if (key === "9") {
+                    e.returnValue = false;
+                }
+            } else if (valSize === 4) {
+                if (e.target.value.slice(-1) === ")") {
+                    e.target.value = e.target.value.trim() + " ";
+                } else if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + ") ";
+            } else if (valSize === 7 || valSize === 9) {
+                if (e.target.value.slice(-1) === " ") {
+                    return;
+                } else e.target.value = e.target.value.trim() + " ";
+            } else if (valSize === 11) {
+                e.returnValue = false;
+            }
+        }
+    }
+
+    function onPastePhone(e) {
+        e.preventDefault();
+        const mask = /(7|8)(9\d{2})(\d{3})(\d{2})(\d{2})/;
+        var phone = e.clipboardData.getData('text/plain').replace(/\D/g, "");
+        if (!mask.test(phone)) {
+            e.returnValue = false;
+            return;
+        }
+        var matched = phone.match(mask);
+        e.target.value = "+7 (" + matched[2] + ") " + matched[3] + " " + matched[4] + " " + matched[5];
+        e.returnValue = false;
+    }
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="libs/swiper/swiper-bundle.min.js"></script>
+<script src="js/app.min.js"></script>
+
+</body>
+</html>
