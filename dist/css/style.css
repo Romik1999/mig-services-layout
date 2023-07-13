@@ -1262,6 +1262,11 @@ main {
     font-size: 27px;
   }
 
+  .footer__text {
+    padding: 30px 0;
+    font-size: 16px;
+  }
+
   .section-title {
     font-size: 30px;
   }
@@ -1447,10 +1452,6 @@ main {
     padding: 40px 20px;
   }
 
-  .footer__text {
-    padding: 55px 0;
-  }
-
   .modal__container {
     padding: 20px 45px;
   }
@@ -1515,6 +1516,10 @@ main {
 
   .footer {
     padding: 0 15px;
+  }
+
+  .footer__text {
+    font-size: 15px;
   }
 
   .swiper-pagination-bullet {
@@ -1764,16 +1769,6 @@ main {
 @media screen and (max-width: 576px) {
   section {
     padding: 40px 15px;
-  }
-
-  .footer__text {
-    padding-top: 60px;
-    padding-bottom: 30px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    row-gap: 40px;
   }
 
   .section-title {
