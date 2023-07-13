@@ -225,7 +225,32 @@ main {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
-  padding: 37px 0;
+  padding: 15px 0;
+}
+
+.header__button {
+  max-width: 390px;
+}
+
+.header__button svg,
+.header__button img {
+  display: none;
+}
+
+.header__logo {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+}
+
+.header__logo span:nth-child(1) {
+  color: #EE3F58;
+}
+
+.header__logo span:nth-child(2) {
+  color: #0669B2;
 }
 
 .hamburger {
@@ -1069,10 +1094,8 @@ main {
 }
 
 @media screen and (max-width: 1441px) {
-  .header__wrapper {
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
+  .header__button {
+    max-width: 370px;
   }
 
   .section-title {
@@ -1161,15 +1184,6 @@ main {
   }
 }
 
-@media screen and (max-width: 1160px) {
-  .header__wrapper {
-    padding: 10px 0;
-    height: 70px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
-
 @media screen and (max-width: 1025px) {
   .btn {
     height: 55px;
@@ -1179,6 +1193,18 @@ main {
     font-weight: 900;
     line-height: 120%;
     letter-spacing: -0.34px;
+  }
+
+  .header__wrapper {
+    padding: 8px 0;
+  }
+
+  .header__button {
+    max-width: 320px;
+  }
+
+  .header__logo {
+    font-size: 27px;
   }
 
   .section-title {
@@ -1338,34 +1364,31 @@ main {
   }
 
   .header__wrapper {
-    height: 115px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: 1fr auto;
-    grid-template-rows: 1fr auto;
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+    padding: 15px 0;
+  }
+
+  .header__button {
+    font-size: 0;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
     padding: 0;
+    height: auto;
   }
 
-  .header__wrapper > *:nth-child(1) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
+  .header__button svg,
+  .header__button img {
+    display: block;
   }
 
-  .header__wrapper > *:nth-child(2) {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-  }
-
-  .header__wrapper > *:nth-child(3) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-  }
-
-  .header__wrapper > *:nth-child(4) {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+  .header__logo {
+    font-size: 23px;
   }
 
   .footer {
