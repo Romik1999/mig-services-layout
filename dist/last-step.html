@@ -27,63 +27,35 @@
 
 <main>
 
-    <section class="quiz">
+    <section class="last-step">
     <div class="cont">
-        <div class="quiz__step">
-            <div class="quiz-step">
-                <h2 class="section-title quiz-step__title section-title--center section-title--dark">Гражданином какой страны Вы являетесь?</h2>
+        <div class="last-step__wrapper">
+            <div class="last-step__inner">
+                <h2 class="section-title last-step__title section-title--center section-title--dark">Поздравляем!</h2>
 
-                <div class="quiz-step__items">
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Украина</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Беларусь</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Молдова</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Казахстан</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Узбекистан</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Киргизия</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Таджикистан</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Армения</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Азербайджан</span>
-                    </label>
-                    <label class="quiz-step__item">
-                        <input type="radio" name="quiz" class="quiz-step__input">
-                        <span class="quiz-step__text">Другие страны</span>
-                    </label>
+                <h3 class="section-subtitle last-step__subtitle section-title--center section-title--dark">С 1 июля 2022 года все граждане Украины могут получить ВНЖ и гражданство РФ в УПРОЩЕННОМ порядке</h3>
+
+
+                <div class="last-step__notice">
+                    Напишите свой номер телефона и получите подробную схему как оформить гражданство РФ именно в вашем
+                    случае *
                 </div>
-                <div class="quiz-step__buttons">
-                    <div class="quiz-step__button quiz-step__button--prev btn btn--border">Назад</div>
-                    <a class="quiz-step__button quiz-step__button--next btn btn--red" href="./last-step.html">Далее</a>
+                <div class="last-step__form">
+                    <form class="form">
+                        <div class="form__wrapper">
+                            <label class="form__field">
+                                <input class="form__input" placeholder="+7 (___) ___ - __ - __"
+                                       onkeypress="maskPhone(event)"
+                                       onpaste="onPastePhone(event)">
+                            </label>
+                            <button class="form__submit btn btn--red" type="submit">Получить консультацию</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 
 </main>
 

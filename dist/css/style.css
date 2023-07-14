@@ -1146,6 +1146,7 @@ main {
 
 .quiz-step__title {
   text-transform: none;
+  margin-bottom: 0;
 }
 
 .quiz-step__items {
@@ -1169,11 +1170,18 @@ main {
   display: -ms-flexbox;
   display: flex;
   width: calc(25% - 15px);
+  cursor: pointer;
 }
 
 .quiz-step__input {
   position: absolute;
   left: 0;
+  opacity: 0;
+}
+
+.quiz-step__input:checked ~ .quiz-step__text {
+  color: #EE3F58;
+  font-weight: 700;
 }
 
 .quiz-step__text {
@@ -1207,6 +1215,27 @@ main {
 
 .quiz-step__button {
   max-width: 250px;
+}
+
+.last-step {
+  padding: 40px 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.last-step__wrapper {
+  max-width: 1250px;
+  width: 100%;
+  margin: auto;
+  height: calc(100vh - 210px);
+  max-height: 1000px;
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 1540px) {
@@ -1540,6 +1569,22 @@ main {
   .advantages-item__text {
     font-size: 16px;
   }
+
+  .quiz-step__items {
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+    row-gap: 15px;
+  }
+
+  .quiz-step__item {
+    width: calc(33% - 10px);
+  }
+
+  .quiz-step__text {
+    height: 55px;
+    padding: 16px 20px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -1859,6 +1904,32 @@ main {
   .advantages-item__text {
     font-size: 15px;
   }
+
+  .quiz {
+    padding: 40px 15px;
+    min-height: unset;
+    max-height: unset;
+    height: unset;
+  }
+
+  .quiz-step__item {
+    width: calc(50% - 7.5px);
+  }
+
+  .quiz-step__text {
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .last-step {
+    padding: 40px 15px;
+  }
+
+  .last-step__wrapper {
+    min-height: unset;
+    max-height: unset;
+    height: unset;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -1905,6 +1976,22 @@ main {
 
   .feedback__subtitle {
     margin-bottom: 12px;
+  }
+
+  .quiz-step__item {
+    width: 100%;
+  }
+
+  .quiz-step__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    row-gap: 20px;
+  }
+
+  .quiz-step__button {
+    max-width: 100%;
   }
 }
 

@@ -1,0 +1,31 @@
+@import "../../scss/colors.scss";
+
+.last-step {
+  padding: 40px 30px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 769px) {
+    padding: 40px 15px;
+  }
+
+  &__wrapper {
+    max-width: 1250px;
+    width: 100%;
+    margin: auto;
+
+    height: calc(100vh - 210px);
+    max-height: 1000px;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 769px) {
+      min-height: unset;
+      max-height: unset;
+      height: unset;
+    }
+  }
+
+  @media screen and (max-width: 340px) {
+  }
+}
