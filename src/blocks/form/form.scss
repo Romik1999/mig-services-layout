@@ -33,6 +33,7 @@
 
     border-radius: 10px;
     border: 1px solid #BDBDBD;
+    transition: 0.2s;
 
     @media screen and (max-width: 1025px) {
       height: 55px;
@@ -53,6 +54,7 @@
 
     &:focus {
       outline: none;
+      border: 1px solid $blue;
     }
   }
 
