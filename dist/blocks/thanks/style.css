@@ -14,6 +14,30 @@
   cursor: pointer;
 }
 
+.thanks__subtitle {
+  margin-bottom: 50px;
+}
+
+.thanks__notice {
+  color: #001749;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 120%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1441px) {
+  .thanks__notice {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .thanks__notice {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .thanks__close {
     top: 30px;
@@ -25,5 +49,11 @@
   .thanks__close {
     position: unset;
     margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .thanks__notice {
+    font-size: 16px;
   }
 }

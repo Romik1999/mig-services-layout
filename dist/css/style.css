@@ -370,6 +370,10 @@ main {
   color: #001749;
 }
 
+.section-title--red {
+  color: #EE3F58;
+}
+
 .section-subtitle {
   font-size: 30px;
   font-style: normal;
@@ -756,6 +760,18 @@ main {
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+}
+
+.thanks__subtitle {
+  margin-bottom: 50px;
+}
+
+.thanks__notice {
+  color: #001749;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 120%;
+  text-align: center;
 }
 
 .reviews__subtitle {
@@ -1227,6 +1243,172 @@ main {
   margin: 0 auto;
 }
 
+.paperwork__title {
+  max-width: 1090px;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.paperwork__subtitle {
+  max-width: 1070px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.paperwork__notice {
+  color: #001749;
+  font-family: Uni Neue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  /* 21.6px */
+  margin-bottom: 45px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.paperwork__order {
+  border-radius: 10px;
+  background: #FFF;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  padding: 50px 30px;
+  margin-bottom: 45px;
+}
+
+.paperwork-order {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 60px;
+}
+
+.paperwork-order__title {
+  color: #154DC8;
+  font-family: Uni Neue;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.paperwork-order__items {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+}
+
+.paperwork-props {
+  max-width: 1072px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.paperwork-props__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.order-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 15px;
+}
+
+.order-item__number {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #EE3F58;
+  color: #ffffff;
+}
+
+.order-item__title {
+  color: #001749;
+  font-family: Gilroy;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: -0.4px;
+}
+
+.order-item__text {
+  color: #001749;
+  font-family: Uni Neue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.props-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.props-item__title {
+  font-family: Gilroy;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+}
+
+.props-item__title--red {
+  color: #EE3F58;
+}
+
+.props-item__title--blue {
+  color: #0669B2;
+}
+
+.props-item__list {
+  margin: 0;
+  padding-left: 15px;
+  color: #001749;
+  font-family: Uni Neue;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
 @media screen and (max-width: 1540px) {
   .work-info__img {
     right: -450px;
@@ -1278,6 +1460,10 @@ main {
   .modal__subtitle {
     font-size: 24px;
     margin-bottom: 55px;
+  }
+
+  .thanks__notice {
+    font-size: 25px;
   }
 
   .reviews__subtitle {
@@ -1448,6 +1634,10 @@ main {
 
   .form__input::placeholder {
     font-size: 16px;
+  }
+
+  .thanks__notice {
+    font-size: 20px;
   }
 
   .reviews__subtitle {
@@ -1940,6 +2130,10 @@ main {
 
   .hero__button {
     max-width: 100%;
+  }
+
+  .thanks__notice {
+    font-size: 16px;
   }
 
   .reviews__subtitle {
