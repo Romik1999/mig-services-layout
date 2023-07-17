@@ -5,6 +5,9 @@
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .callback__info {
@@ -65,4 +68,74 @@
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+@media screen and (max-width: 1025px) {
+  .callback__wrapper {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+
+  .callback__info {
+    max-width: 65%;
+  }
+
+  .callback__title {
+    margin-bottom: 50px;
+  }
+
+  .callback__text {
+    margin-bottom: 45px;
+    max-width: 534px;
+  }
+
+  .callback__notice {
+    max-width: 534px;
+  }
+
+  .callback__img {
+    max-width: 34%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .callback__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .callback__info {
+    max-width: 100%;
+  }
+
+  .callback__title {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .callback__text {
+    max-width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .callback__subtitle {
+    text-align: center;
+  }
+
+  .callback__notice {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .callback__img {
+    max-width: 100%;
+  }
+
+  .callback__img img {
+    max-width: 300px;
+  }
 }
