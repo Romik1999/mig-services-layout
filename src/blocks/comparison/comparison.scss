@@ -1,118 +1,144 @@
 @import "../../scss/colors.scss";
 
-.callback {
-  &__wrapper {
+.comparison {
+  &__items {
     display: flex;
-    column-gap: 30px;
+    column-gap: 20px;
+    position: relative;
     justify-content: space-between;
 
     @media screen and (max-width: 1025px) {
-      align-items: flex-end;
-    }
-    @media screen and (max-width: 769px) {
       flex-direction: column;
-      row-gap: 30px;
-    }
-  }
-
-  &__info {
-    max-width: 46%;
-    width: 100%;
-
-    @media screen and (max-width: 1025px) {
-      max-width: 65%;
-    }
-    @media screen and (max-width: 769px) {
-      max-width: 100%;
-    }
-  }
-
-  &__title {
-    margin-bottom: 70px;
-
-    @media screen and (max-width: 1025px) {
-      margin-bottom: 50px;
-    }
-    @media screen and (max-width: 769px) {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-  }
-
-  &__text {
-    color: #001749;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 120%;
-    padding-left: 20px;
-    margin: 0;
-    margin-bottom: 70px;
-    max-width: 562px;
-    width: 100%;
-    box-sizing: border-box;
-
-    @media screen and (max-width: 1025px) {
-      margin-bottom: 45px;
-      max-width: 534px;
-    }
-    @media screen and (max-width: 769px) {
-      max-width: 100%;
-      margin-bottom: 25px;
-    }
-  }
-
-  &__subtitle {
-    margin-bottom: 20px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: -0.6px;
-    font-family: Gilroy, sans-serif;
-
-    @media screen and (max-width: 769px) {
-      text-align: center;
-    }
-  }
-
-  &__notice {
-    color: #001749;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-    max-width: 546px;
-    width: 100%;
-
-    @media screen and (max-width: 1025px) {
-      max-width: 534px;
-    }
-    @media screen and (max-width: 769px) {
-      max-width: 100%;
-      text-align: center;
+      align-items: center;
+      row-gap: 40px;
     }
   }
 
   &__img {
+    max-width: 43%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
     display: flex;
-    justify-content: center;
-    max-width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    @media screen and (max-width: 1025px) {
+      position: unset;
+      transform: none;
+    }
+    @media screen and (max-width: 769px) {
+      max-width: 500px;
+    }
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__item {
+    max-width: 32.5%;
     width: 100%;
 
     @media screen and (max-width: 1025px) {
-      max-width: 34%;
+      max-width: 410px;
     }
     @media screen and (max-width: 769px) {
       max-width: 100%;
     }
+  }
 
-    & img {
-      max-width: 570px;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
+  &-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
 
-      @media screen and (max-width: 769px) {
-        max-width: 300px;
+    @media screen and (max-width: 1025px) {
+      row-gap: 30px;
+      align-items: center;
+    }
+    @media screen and (max-width: 769px) {
+      row-gap: 25px;
+    }
+
+    &--left {
+      text-align: left;
+    }
+
+    &--right {
+      text-align: right;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      @media screen and (max-width: 1025px) {
+        row-gap: 15px;
       }
     }
+
+    &__img {
+      display: flex;
+
+      @media screen and (max-width: 1025px) {
+        justify-content: center;
+      }
+    }
+
+    &__title {
+      font-family: Gilroy, sans-serif;
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 120%;
+      letter-spacing: -0.5px;
+
+      @media screen and (max-width: 1025px) {
+        font-size: 17px;
+        text-align: center;
+      }
+      @media screen and (max-width: 769px) {
+        font-size: 18px;
+      }
+
+      &--red {
+        color: $red;
+      }
+
+      &--dark {
+        color: #001749;
+      }
+
+      &--blue {
+        color: $blue;
+      }
+    }
+
+    &__text {
+      color: #001749;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 120%;
+
+      @media screen and (max-width: 1025px) {
+        font-size: 16px;
+        text-align: center;
+      }
+      @media screen and (max-width: 769px) {
+        font-size: 15px;
+      }
+
+      & ul,
+      & ol {
+        padding-left: 20px;
+        margin: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 769px) {
   }
 }
