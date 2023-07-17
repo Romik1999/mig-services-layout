@@ -1,6 +1,11 @@
 @import "../../scss/colors.scss";
 
 .reviews {
+  &__title{
+    @media screen and (max-width: 769px) {
+      text-align: center;
+    }
+  }
   &__subtitle{
     margin-bottom: 90px;
 
@@ -9,6 +14,9 @@
     }
     @media screen and (max-width: 1025px) {
       margin-bottom: 50px;
+    }
+    @media screen and (max-width: 769px) {
+      text-align: center;
     }
     @media screen and (max-width: 576px) {
       margin-bottom: 40px;

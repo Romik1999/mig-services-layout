@@ -2158,6 +2158,14 @@ main {
     margin-bottom: 40px;
   }
 
+  .reviews__title {
+    text-align: center;
+  }
+
+  .reviews__subtitle {
+    text-align: center;
+  }
+
   .reviews__items {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
