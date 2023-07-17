@@ -82,9 +82,8 @@
     }
 
     &__img {
-      display: flex;
-
       @media screen and (max-width: 1025px) {
+        display: flex;
         justify-content: center;
       }
     }

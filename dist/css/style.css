@@ -1640,12 +1640,6 @@ main {
   row-gap: 20px;
 }
 
-.comparison-item__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .comparison-item__title {
   font-family: Gilroy, sans-serif;
   font-size: 25px;
@@ -2214,6 +2208,9 @@ main {
   }
 
   .comparison-item__img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
