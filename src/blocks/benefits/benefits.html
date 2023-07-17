@@ -1,0 +1,31 @@
+<section class="benefits">
+    <div class="cont">
+        <div class="benefits__wrapper">
+            @@include('section-title/section-title.html', {
+            sectionTitleClass: 'benefits__title benefits__title--first',
+            sectionTitleAlignClass:'section-title--left',
+            sectionTitleText: 'Преимущества работы с нами:',
+            sectionTitleColorClass: 'section-title--blue'
+            } )
+            @@include('section-title/section-title.html', {
+            sectionTitleClass: 'benefits__title benefits__title--second',
+            sectionTitleAlignClass:'section-title--left',
+            sectionTitleText: 'Гарантия на результат',
+            sectionTitleColorClass: 'section-title--dark'
+            } )
+            <div class="benefits__text">
+                По правилам составленного договора мы гарантируем и несем полную ответственность за результат. Выдержка
+                из договора:
+            </div>
+            <div class="benefits__notice">
+                В случае отказа со стороны подразделений ГУВМ МВД России в приеме документов Заказчика, предусмотренных
+                в Приложении №1 к Договору, по причинам, не связанным с виной Заказчика, Исполнитель <b>за собственный счет
+                устраняет причины и подготавливает документы для повторной подачи заявления, вплоть до окончательного
+                выполнения обязательств по Договору.</b>
+                <div class="benefits__img">
+                    <img src="./img/benefits/benefits-1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
